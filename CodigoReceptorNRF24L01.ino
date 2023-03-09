@@ -30,9 +30,12 @@ void loop()
       radio.read(data, sizeof data);
       Serial.print("Dato0= " );
       Serial.print(data[0]);
-      if(data[0] == 3.14){
+      if(data[0] == 3.14151){
         digitalWrite(led, HIGH);
         digitalWrite(rele, HIGH);
+      }else{
+        digitalWrite(led, LOW);
+        digitalWrite(rele, LOW);
       }
    }
 }
